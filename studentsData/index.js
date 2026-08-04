@@ -21,7 +21,7 @@ fetch(`https://opensheet.elk.sh/${sheet}/stData`)
             <div class="callBtn">
                 <button class="whatsappBtn">Whatsapp</button>
                 <button class="callBtn1">Call</button>
-                <button class="ledgerBtn">Ledger</button>
+                <button class="ledgerBtn">Done</button>
             </div>
         `;
 
