@@ -22,9 +22,9 @@ form.addEventListener("click", function (e) {
     }
 
     if (mobile.length !== 10 || whatsapp.length !== 10) {
-    alert("Please enter valid 10-digit Mobile and WhatsApp numbers.");
-    return;
-}
+        alert("Please enter valid 10-digit Mobile and WhatsApp numbers.");
+        return;
+    }
 
     const data = { name, mobile, highschool, intermediate, whatsapp, email, address };
 
@@ -56,5 +56,5 @@ form.addEventListener("click", function (e) {
 
 document.getElementById("whatsappMessage").addEventListener('click', () => {
     var message = `Hame form fill kar diya , mujhe Contact kare`
-    window.open(`https://wa.me/917607658761?text=`)
+    window.open(`https://wa.me/917607658761?text=${message}`)
 })
