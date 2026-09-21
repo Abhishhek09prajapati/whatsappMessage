@@ -1,0 +1,39 @@
+const sheet = "1fTo96YaDPCYuLHTafVx3Y50HBZf8VdDHeMPzgMYtd_c";
+var resultData = document.getElementById("resultData")
+var catagotriesList = document.getElementById("catagotriesList")
+
+fetch(`https://opensheet.elk.sh/${sheet}/cata`)
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(t => {
+            var div = document.createElement("div")
+            div.className = "catadiv"
+            div.innerHTML = `<img src="./images/${t.images}" width="100px" alt="">
+                <label for="">${t.name}</label>`
+            catagotriesList.append(div)
+
+
+            div.addEventListener("click", () => {
+                resultData.innerHTML = "Please Wait Data is Loading"                
+                callone(t.code)
+                resultData.innerHTML = ""
+            })
+        });
+    });
+
+
+function callone(p) {
+    fetch(`https://opensheet.elk.sh/${sheet}/${p}`)
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(t => {
+                var div = document.createElement("div");
+                div.className = "resultData2"
+                div.innerHTML = `<img src="./images/${t.image}" alt="">
+                <label for="">${t.name}</label>
+                <label for="">Price - ${t.price}</label>`
+                resultData.append(div)
+            })
+        });
+}
+

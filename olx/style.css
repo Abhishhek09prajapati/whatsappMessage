@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    width: 550px;
+    height: max-content;
+    border: 1px solid black;
+    margin: auto;
+}
+.catagotriesList{
+    /* background-color: red; */
+    width: 100%;
+    height: max-content;
+    display: flex;
+    overflow-x: scroll;
+    padding: 5px 10px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+}
+.catadiv{
+    /* background-color: green; */
+    width: max-content;
+    display:flex ;
+    flex-direction: column;
+    height: max-content;
+}
+.catadiv img{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.catadiv label{
+    text-align: center;
+    margin: 3px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.resultData{
+    /* background-color: rgb(83, 245, 83); */
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.resultData2{
+    width: 50%;
+    height: max-content;
+    padding: 3px 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.resultData2 img{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.resultData2 label{
+    font-family: 'Times New Roman', Times, serif;
+}
