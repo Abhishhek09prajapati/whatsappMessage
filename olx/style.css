@@ -62,3 +62,11 @@
 .resultData2 label{
     font-family: 'Times New Roman', Times, serif;
 }
+@media (min-width:480px){
+    .main-container{
+    width: 100%;
+    height: max-content;
+    border: 1px solid black;
+    margin: auto;
+}
+}
