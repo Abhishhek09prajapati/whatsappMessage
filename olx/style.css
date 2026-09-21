@@ -55,11 +55,12 @@
 .resultData2 {
     width: 50%;
     height: max-content;
-    padding: 3px 10px;
+    padding: 8px 10px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     text-align: center;
+    
 }
 
 .resultData2 img {
@@ -71,7 +72,14 @@
 .resultData2 label {
     font-family: 'Times New Roman', Times, serif;
 }
-
+.resultData2 button{
+    background-color: rgb(63, 245, 63);
+    height: 25px;
+    width: max-content;
+    padding: 5px 10px;
+    margin: auto;
+    border-radius: 4px;
+}
 @media (max-width:480px) {
     .main-container {
         width: 100%;

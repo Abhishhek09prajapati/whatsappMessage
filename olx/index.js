@@ -31,9 +31,19 @@ function callone(p) {
                 div.className = "resultData2"
                 div.innerHTML = `<img src="./images/${t.image}" alt="">
                 <label for="">${t.name}</label>
-                <label for="">Price - ${t.price}</label>`
+                <label for="">Price - ${t.price}</label>
+                <button class="itmesLike">I want this Product</button>
+                `
                 resultData.append(div)
+
+                var a = div.querySelector(".itmesLike")
+
+                a.addEventListener("click",()=>{
+                    var mess = `Mujhe Yeh Product Accha Laga , mujhe Call Back Kare ${t.name} Price ${t.price}`
+                    window.open(`https://wa.me/918429858584?text=${mess}`)
+                })
             })
         });
 }
+
 
