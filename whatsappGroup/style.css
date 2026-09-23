@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+a{
+    color: rgb(87, 4, 4);
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+
+}
+
+.main-Container {
+    width: 100%;
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    background: linear-gradient(135deg,
+            #f8fafc,
+            #e0f2fe);
+
+
+}
+
+.navBar {
+    background-color: rgb(4, 182, 13);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    align-items: center;
+}
+
+.navBar ul {
+    display: flex;
+    /* background-color: white; */
+}
+
+.navBar ul li {
+    padding: 10px 5px;
+    text-decoration-style: none;
+}
+
+.navBar ul li:hover {
+    background-color: white;
+    transition: all 0.9s;
+    border-radius: 10px;
+}
+
+.mainbody {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.footerdiv {
+    background-color: green;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding: 5%;
+    bottom: 0;
+}
+
+.footerdiv p {
+    padding: 10px;
+    width: 50%;
+    height: max-content;
+}
+
+.col1 {
+    width: 30%;
+    height: 550px;
+    background-color: blanchedalmond;
+}
+
+.col2 {
+    width: 80%;
+    height: 550px;
+    background-color: rgb(230, 145, 18);
+    overflow-y: scroll;
+}
+
+.catagoriesDiv {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+
+}
+
+.divdata {
+    background-color: rgb(230, 241, 230);
+    width: 100%;
+    gap: 10px;
+    padding: 5px 8px;
+}
+
+.divdata:focus {
+    background-color: yellow;
+}
+
+.divdata:hover {
+    background-color: red;
+    color: white;
+}
+
+.joinDiv {
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.joinDiv button {
+    padding: 3px ;
+    background-color: green;
+    border-radius:3px;
+    color: white;
+}
+
+.joinDiv button:hover {
+    background-color: rgb(54, 250, 54);
+    color: black;
+}
+
+.joinDiv button:active {
+    transform: translate(2px, 5px);
+}
+.addDiv{
+    text-align: center;
+    margin: auto;
+    background-color: rgb(7, 236, 18);
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    animation: aaa 0.4s alternate infinite ease-in-out;
+    
+}
+.addData{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px 12px;
+    
+}
+.addData span{
+    
+    width: 100%;
+    /* background-color: yellow; */
+    float: right;
+    text-align: end;
+    padding: 0px 5px;
+    font-weight: 600;
+    font-size: larger;
+
+}
+
+.addData select{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 3px green;
+
+}
+.addData div label{
+    font-size: 15px;
+}
+.addData div input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    padding: 0px 5px;
+}
+.addData button{
+    color: white;
+    background-color: green;
+    padding: 5px 15px;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+
+}
+@keyframes aaa {
+
+    from {
+        transform: rotate(-2deg);
+    }
+
+    to {
+        transform: rotate(3deg);
+    }
+}
+@media (max-width: 480px) {
+    .navBar {
+        justify-content: center;
+    }
+
+    .navBar ul {
+        display: none;
+    }
+}
