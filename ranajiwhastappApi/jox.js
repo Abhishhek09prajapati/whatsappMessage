@@ -9,7 +9,7 @@ fetch(kot)
     .then((data) => {
         const mainDiv = document.querySelector(".maindiv");
         mainDiv.innerHTML = "";
-        data.slice(0,5).forEach((element, i) => {
+        data.slice(0,2).forEach((element, i) => {
             const div = document.createElement("div");
             div.classList.add("div1");
             div.innerHTML = `${i + 1}. ${element.numberx}`;
