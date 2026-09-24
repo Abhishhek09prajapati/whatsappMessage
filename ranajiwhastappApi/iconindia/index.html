@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IconStar Star Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img id="logoimg" src="/images/iconstarone.jpg" alt="IconStar">
+        </div>
+
+        <h2>IconStar Registration</h2>
+        <p class="subtitle">Please fill in your details</p>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="number" id="mobile" name="mobile" placeholder="Enter mobile number" maxlength="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="gmail">Gmail</label>
+                <input type="email" id="gmail" name="gmail" placeholder="Enter your Gmail" required>
+            </div>
+
+            <button id="submit-btn" >
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
