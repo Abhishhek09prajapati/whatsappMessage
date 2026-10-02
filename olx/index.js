@@ -5,17 +5,18 @@ var closeBtn = document.getElementById("closeBtn")
 var imageView = document.getElementById("imageView")
 var changeImg = document.getElementById("changeImg")
 
+let f = null
+
 fetch(`https://opensheet.elk.sh/${sheet}/cata`)
     .then(res => res.json())
     .then(data => {
         data.forEach(t => {
+            f = t
             var div = document.createElement("div")
             div.className = "catadiv"
             div.innerHTML = `<img src="./images/${t.images}" width="100px" alt="">
                 <label for="">${t.name}</label>`
             catagotriesList.append(div)
-
-
             div.addEventListener("click", () => {
                 resultData.innerHTML = "Please Wait Data is Loading"
                 callone(t.code)
@@ -44,11 +45,8 @@ function callone(p) {
 
 
                 ima.addEventListener("click", () => {
-
-
-                    chaohhh(t.imagesxCode)
+                    chaohhh(t)
                 })
-
                 a.addEventListener("click", () => {
                     var mess = `Mujhe Yeh Product Accha Laga , mujhe Call Back Kare ${t.name} Price ${t.price}`
                     window.open(`https://wa.me/918429858584?text=${mess}`)
@@ -67,23 +65,27 @@ let imageInterval;
 
 function chaohhh(lo) {
 
+    console.log(lo)
+
+
     imageView.style.display = "block";
+
+    document.getElementById("itmesName").innerText = lo.name;
+    document.getElementById("itmesPrice").innerText = `Price - ${lo.price}`;
+    document.getElementById("itmesDiscription").innerText = lo.description;
+
 
     fetch(`https://opensheet.elk.sh/${sheet}/imagesCode`)
         .then(res => res.json())
         .then(t => {
-
             var k = t.filter(u => {
-                return lo === u.imageCCode;
+                return lo.imagesxCode === u.imageCCode;
             });
-
             var kk = k[0];
-
             if (!kk) {
                 console.log("Image code not found");
                 return;
             }
-
             var imageO = [
                 "imagesone",
                 "imagestwo",
@@ -91,12 +93,9 @@ function chaohhh(lo) {
                 "imagesfour",
                 "imagesfive"
             ];
-
             var i = 0;
-
             // पुराने interval को बंद करें
             clearInterval(imageInterval);
-
             // पहली image तुरंत दिखाएँ
             if (kk[imageO[i]]) {
                 changeImg.src = `./images/${kk[imageO[i]]}`;
