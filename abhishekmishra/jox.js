@@ -1,5 +1,5 @@
 const sh = "1UGM3yaIqoa0UK9bKl-nEDAE5UoNQggWKDORZ64AR8qA"
-const scdata = "https://script.google.com/macros/s/AKfycbzWKWEjADNxI_v6Xpj84kctIgemzgr_YHgylaQt6clF45gBab_kwhWDi2Zc4PhgarFF/exec";
+const scdata = "";
 const kot = `https://opensheet.elk.sh/${sh}/whatappmessage`;
 
 // Fetch data from the Google Sheet API proxy
