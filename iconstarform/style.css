@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe, #f5f3ff);
+}
+
+.main-div {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15);
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.main-div h2 {
+    color: #1e3a8a;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.iconstarLogo {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    margin-bottom: 22px;
+    border-radius: 15px;
+}
+
+.form-container {
+    width: 100%;
+    text-align: left;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-container textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(37, 99, 235, 0.3);
+}
+
+.form-container button:active {
+    transform: scale(0.98);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .main-div {
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .main-div h2 {
+        font-size: 21px;
+    }
+
+    .iconstarLogo {
+        width: 90px;
+        height: 90px;
+    }
+}
