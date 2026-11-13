@@ -19,8 +19,7 @@ Address: ${address}
 Please register my Super ID.
     `;
 
-    const whatsappURL =
-        `https://wa.me/916387215755?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/916387215755?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
 });
